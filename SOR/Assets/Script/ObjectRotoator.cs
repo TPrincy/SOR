@@ -7,6 +7,9 @@ public class ObjectRotoator : MonoBehaviour
 {
     public float rotaSpeed;
     public float amp;
+    public float freq;
+
+    Vector3 initPos;
 
     private void Start()
     {
@@ -22,7 +25,7 @@ public class ObjectRotoator : MonoBehaviour
     private void UDmovement()
     {
         //Small line of code to have the collectable move up and down in the form of a sin wave making it a smooth motion
-        transform.position = new Vector3(gameObject.transform.localPosition.x, Mathf.Sin(Time.time), gameObject.transform.localPosition.z);
+        transform.position = new Vector3(initPos.x, Mathf.Sin(Time.time * freq) * amp + initPos.y, initPos.z);
     }
 
     private void rotation()
