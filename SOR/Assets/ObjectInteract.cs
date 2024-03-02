@@ -15,4 +15,13 @@ public class ObjectInteract : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.gameObject.)
+        //{
+            //Destroy(gameObject);
+        //}
+        Destroy(gameObject);
+    }
 }
