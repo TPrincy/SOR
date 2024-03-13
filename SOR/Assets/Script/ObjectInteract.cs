@@ -7,6 +7,7 @@ public class ObjectInteract : MonoBehaviour
 {
     public bool isInRange = false;
     public GameObject InteractText;
+    public GameObject ScrollUI;
 
     void Update()
     {
@@ -15,6 +16,7 @@ public class ObjectInteract : MonoBehaviour
             print("Destroy");
             Destroy(gameObject);
             InteractText.SetActive(false);
+            ScrollUI.SetActive(true);
         }
     }
 
