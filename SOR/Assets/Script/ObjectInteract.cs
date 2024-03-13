@@ -4,24 +4,8 @@ using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerStay(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if (collision.gameObject.)
-        //{
-            //Destroy(gameObject);
-        //}
-        Destroy(gameObject);
+        print("destroy");
     }
 }
