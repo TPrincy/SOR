@@ -32,12 +32,10 @@ public class interactionsManager : MonoBehaviour
         if (CompareTag("Collect"))
         {
             questManager.isInRangeCollectable = true;
-            print("collectable in range");
         }
         else if (CompareTag("Cleric"))
         {
             questManager.isInRangeNPC = true;
-            print("NPC in range");
         }
     }
 
