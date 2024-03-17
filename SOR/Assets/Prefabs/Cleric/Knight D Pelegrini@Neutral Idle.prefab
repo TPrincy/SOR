@@ -172,6 +172,9 @@ GameObject:
   - component: {fileID: 131660847795979808}
   - component: {fileID: 6283625404532595802}
   - component: {fileID: 777211603311682538}
+  - component: {fileID: 5866666021783354523}
+  - component: {fileID: 1443480043605500915}
+  - component: {fileID: 3181488415287730651}
   m_Layer: 0
   m_Name: Knight D Pelegrini@Neutral Idle
   m_TagString: Cleric
@@ -227,11 +230,59 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763378259269557402}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.999582, y: 1.9059901, z: 2.2893562}
-  m_Center: {x: -0.071795456, y: 0.94162047, z: 0.27456853}
+  m_Center: {x: 0, y: 0.94162047, z: 0.27456853}
+--- !u!114 &5866666021783354523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763378259269557402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad7a011bd9d27f48a30e91bf76254fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questManager: {fileID: 0}
+  interactionsManager: {fileID: 0}
+  playerCam: {fileID: 0}
+  cam: {fileID: 0}
+  clericConversation: {fileID: 0}
+--- !u!114 &1443480043605500915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763378259269557402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098483766c8f83a489ee55328b932e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questManager: {fileID: 3181488415287730651}
+--- !u!114 &3181488415287730651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763378259269557402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d735b7e10b1ebc479046d7666b754b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsManager: {fileID: 1443480043605500915}
+  clericInteract: {fileID: 5866666021783354523}
+  isInRangeCollectable: 0
+  isInRangeNPC: 0
+  InteractText: {fileID: 0}
+  ScrollUI: {fileID: 0}
 --- !u!1 &1047248061409183139
 GameObject:
   m_ObjectHideFlags: 0

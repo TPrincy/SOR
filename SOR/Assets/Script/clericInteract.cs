@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
+using System;
 
 public class clericInteract : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public questManager questManager;
+    public interactionsManager interactionsManager;
+    public PlayerCam playerCam;
+    public Camera cam;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField] public NPCConversation clericConversation;
+
+    public void talk()
+    { 
+        cam.enabled = false;
+        ConversationManager.Instance.StartConversation(clericConversation);
     }
 }

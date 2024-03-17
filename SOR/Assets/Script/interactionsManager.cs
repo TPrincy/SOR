@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Fungus;
+using DialogueEditor;
 
-public class ObjectInteract : MonoBehaviour
+public class interactionsManager : MonoBehaviour
 {
     
     public questManager questManager;
@@ -27,12 +29,22 @@ public class ObjectInteract : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        questManager.isInRange = true;
+        if (CompareTag("Collect"))
+        {
+            questManager.isInRangeCollectable = true;
+            print("collectable in range");
+        }
+        else if (CompareTag("Cleric"))
+        {
+            questManager.isInRangeNPC = true;
+            print("NPC in range");
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        questManager.isInRange = false;
+        questManager.isInRangeCollectable = false;
+        questManager.isInRangeNPC = false;
         //disables the interact text when the player leaves the detection range of the object
         questManager.InteractText.SetActive(false);
     }
