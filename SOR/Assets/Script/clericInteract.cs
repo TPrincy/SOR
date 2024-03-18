@@ -18,8 +18,6 @@ public class clericInteract : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         ConversationManager.Instance.StartConversation(clericConversation);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
 
     }
 }
