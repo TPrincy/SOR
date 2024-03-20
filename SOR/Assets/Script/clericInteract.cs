@@ -20,4 +20,9 @@ public class clericInteract : MonoBehaviour
         ConversationManager.Instance.StartConversation(clericConversation);
 
     }
+
+    public void endConvo()
+    {
+
+    }
 }
