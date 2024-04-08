@@ -4,11 +4,13 @@ using UnityEngine;
 using TMPro;
 using Fungus;
 using DialogueEditor;
+using Unity.VisualScripting;
 
 public class interactionsManager : MonoBehaviour
 {
     
     public questManager questManager;
+    public SceneSwitcher sceneSwitcher;
 
     void Update()
     {
@@ -19,6 +21,14 @@ public class interactionsManager : MonoBehaviour
     {
         //Ensures that when the gamestart the interact text is disabled from start
         questManager.InteractText.SetActive(false);
+    }
+
+    public void mainMenuInteract()
+    {
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            sceneSwitcher.goToMainMenu();
+        }
     }
     
     void OnTriggerEnter(Collider other)

@@ -23,6 +23,6 @@ public class clericInteract : MonoBehaviour
 
     public void endConvo()
     {
-
+        
     }
 }
