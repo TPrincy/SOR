@@ -16119,6 +16119,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8883aac99bcc2846af3ce95f588975f, type: 3}
+--- !u!1 &668326055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668326056}
+  - component: {fileID: 668326057}
+  m_Layer: 0
+  m_Name: ArcherDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668326056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668326055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1829257789}
+  m_Father: {fileID: 770111484}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668326057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668326055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":540.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 1829257790}
+  ContinueFont: {fileID: 0}
+  EndConversationFont: {fileID: 0}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &670800019
 GameObject:
   m_ObjectHideFlags: 0
@@ -19293,6 +19351,7 @@ Transform:
   - {fileID: 1138184958}
   - {fileID: 207295407}
   - {fileID: 1458920449}
+  - {fileID: 668326056}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23067,7 +23126,8 @@ MonoBehaviour:
   interactionsManager: {fileID: 0}
   clericInteract: {fileID: 0}
   isInRangeCollectable: 0
-  isInRangeNPC: 0
+  isInRangeClericNPC: 0
+  isInRangeArcherNPC: 0
   InteractText: {fileID: 0}
   ScrollUI: {fileID: 0}
 --- !u!1 &932965073
@@ -39324,16 +39384,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 6
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":69,"yPos":173},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
-    course, where did you have it last","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":383,"yPos":171},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
-    yet","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":232,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Excuse
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":553.5,"yPos":219},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
+    course, where did you have it last","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":850.5,"yPos":92},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
+    yet","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":552.5,"yPos":80},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Excuse
     me sir, would I be able to ask for your assistance locating a scroll that i seem
-    to have misplaced","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cleric","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":69,"yPos":296},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
-    thank you. Last I remember I had my scroll over by the blacksmith","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cleric","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":381,"yPos":291},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Let
+    to have misplaced","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cleric","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":551.5,"yPos":318},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+    thank you. Last I remember I had my scroll over by the blacksmith","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cleric","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":847.5,"yPos":205},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Let
     me know if you change your mind the help would be appreciated","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cleric","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
-  DefaultSprite: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
+  DefaultSprite: {fileID: 21300000, guid: bf566e80557acbc45b9a695fcaa25327, type: 3}
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
   - {fileID: 1539512958}
@@ -41685,7 +41745,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 4
   TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
+  Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!4 &1539512954
 Transform:
@@ -41731,7 +41791,7 @@ MonoBehaviour:
         m_CallState: 2
   NodeID: 3
   TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
+  Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &1539512956
 MonoBehaviour:
@@ -41788,7 +41848,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 0
   TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
+  Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!1 &1543618729 stripped
 GameObject:
@@ -46891,7 +46951,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c3880918b1f46894c870f0775cfc1f73, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3880918b1f46894c870f0775cfc1f73, type: 3}
       propertyPath: m_LocalScale.x
@@ -48890,6 +48950,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c81cbc668a3841a4d86a26b17abdb96a, type: 3}
+--- !u!1 &1829257788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829257789}
+  - component: {fileID: 1829257790}
+  m_Layer: 0
+  m_Name: ConversationEventInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829257789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829257788}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8544009, y: 10.59438, z: 105.13568}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 668326056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829257790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829257788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
 --- !u!1001 &1832549647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50627,55 +50738,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.452644
+      value: -20.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9423027
+      value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.066322
+      value: -55.91
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.68520373
+      value: 0.99380445
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0011418426
+      value: 0.0009098296
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.72835064
+      value: 0.11113658
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00006153151
+      value: -0.00069267635
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.085
+      value: 0.112
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 93.497
+      value: 12.762
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.1
+      value: -0.067
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c2da8397f1ab8e0449972701af43dbaf, type: 3}
       propertyPath: m_Name
@@ -61207,6 +61318,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 5866666021783354523, guid: a42e3ee9586aed046b17370f2bcb75ab, type: 3}
+      propertyPath: CameraMovement
+      value: 
+      objectReference: {fileID: 483442608}
     - target: {fileID: 5866666021783354523, guid: a42e3ee9586aed046b17370f2bcb75ab, type: 3}
       propertyPath: clericConversation
       value: 

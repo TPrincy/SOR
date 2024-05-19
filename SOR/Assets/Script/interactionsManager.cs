@@ -45,14 +45,18 @@ public class interactionsManager : MonoBehaviour
         }
         else if (CompareTag("Cleric"))
         {
-            questManager.isInRangeNPC = true;
+            questManager.isInRangeClericNPC = true;
+        }
+        else if (CompareTag("Archer"))
+        {
+            questManager.isInRangeArcherNPC = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
         questManager.isInRangeCollectable = false;
-        questManager.isInRangeNPC = false;
+        questManager.isInRangeClericNPC = false;
         //disables the interact text when the player leaves the detection range of the object
         questManager.InteractText.SetActive(false);
     }

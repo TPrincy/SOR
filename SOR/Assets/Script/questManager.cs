@@ -9,7 +9,8 @@ public class questManager : MonoBehaviour
     public clericInteract clericInteract;
     
     public bool isInRangeCollectable = false;
-    public bool isInRangeNPC = false;
+    public bool isInRangeClericNPC = false;
+    public bool isInRangeArcherNPC = false;
 
     public GameObject InteractText;
     public GameObject ScrollUI;
@@ -24,7 +25,7 @@ public class questManager : MonoBehaviour
             ScrollUI.SetActive(true);
             //add in a bool to say that the player has the item
         }
-        else if(Input.GetKeyDown(KeyCode.E) && isInRangeNPC)
+        else if(Input.GetKeyDown(KeyCode.E) && isInRangeClericNPC)
         {
             clericInteract.talk();
         }
