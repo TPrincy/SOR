@@ -14,6 +14,7 @@ public class clericInteract : MonoBehaviour
     bool isTalking = false;
 
     [SerializeField] public NPCConversation clericConversation;
+    [SerializeField] public NPCConversation archerConversation;
 
     private void Update()
     {
@@ -23,7 +24,7 @@ public class clericInteract : MonoBehaviour
         }
     }
 
-    public void talk()
+    public void clericTalk()
     {
         isTalking = true;
 
@@ -32,6 +33,17 @@ public class clericInteract : MonoBehaviour
         playerCam.enabled = false;
         playerMovement.enabled = false;
         ConversationManager.Instance.StartConversation(clericConversation);
+    }
+
+    public void archerTalk()
+    {
+        isTalking = true;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        playerCam.enabled = false;
+        playerMovement.enabled = false;
+        ConversationManager.Instance.StartConversation(archerConversation);
     }
 
     public void endConvo()

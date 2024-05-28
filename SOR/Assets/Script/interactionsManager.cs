@@ -57,6 +57,7 @@ public class interactionsManager : MonoBehaviour
     {
         questManager.isInRangeCollectable = false;
         questManager.isInRangeClericNPC = false;
+        questManager.isInRangeArcherNPC = false;
         //disables the interact text when the player leaves the detection range of the object
         questManager.InteractText.SetActive(false);
     }

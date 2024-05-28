@@ -27,7 +27,11 @@ public class questManager : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.E) && isInRangeClericNPC)
         {
-            clericInteract.talk();
+            clericInteract.clericTalk();
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && isInRangeArcherNPC)
+        {
+            clericInteract.archerTalk();
         }
     }
 }
