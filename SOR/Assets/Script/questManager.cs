@@ -15,8 +15,8 @@ public class questManager : MonoBehaviour
     public bool isInRangeBow = false;
     public bool isInRangeClericNPC = false;
     public bool isInRangeArcherNPC = false;
-    public bool collectedScroll = false;
-    public bool collectedBow = false;
+    public static bool collectedScroll = false;
+    public static bool collectedBow = false;
 
     [Header("UI Objects")]
     public GameObject InteractText;
@@ -68,7 +68,7 @@ public class questManager : MonoBehaviour
 
         else if(Input.GetKeyDown(KeyCode.E) && isInRangeClericNPC && collectedScroll)
         {
-            print("Item collected");
+            ScrollUI.SetActive(false);
             clericInteract.clecicItemConvo();
         }
 
