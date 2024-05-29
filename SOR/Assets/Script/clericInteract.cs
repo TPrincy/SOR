@@ -6,6 +6,7 @@ using System;
 
 public class clericInteract : MonoBehaviour
 {
+    [Header("Script References")] 
     public questManager questManager;
     public interactionsManager interactionsManager;
     public PlayerMovement playerMovement;
@@ -13,8 +14,13 @@ public class clericInteract : MonoBehaviour
 
     bool isTalking = false;
 
+    [Header("Cleric Dialogue")]
     [SerializeField] public NPCConversation clericConversation;
+    [SerializeField] public NPCConversation ClericDialogueItemCollect;
+
+    [Header("Archer Dialogue")]
     [SerializeField] public NPCConversation archerConversation;
+    [SerializeField] public NPCConversation ArcherDialogueItemColect;
 
     private void Update()
     {
@@ -33,6 +39,17 @@ public class clericInteract : MonoBehaviour
         playerCam.enabled = false;
         playerMovement.enabled = false;
         ConversationManager.Instance.StartConversation(clericConversation);
+    }
+
+    public void clecicItemConvo()
+    {
+        isTalking = true;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        playerCam.enabled = false;
+        playerMovement.enabled = false;
+        ConversationManager.Instance.StartConversation(ClericDialogueItemCollect);
     }
 
     public void archerTalk()
@@ -55,4 +72,6 @@ public class clericInteract : MonoBehaviour
         playerCam.enabled = true;
         playerMovement.enabled = true;
     }
+
+
 }

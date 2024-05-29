@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4559239059783133731}
   - component: {fileID: 4559239059783133730}
-  - component: {fileID: 4559239059783133728}
   - component: {fileID: 4559239059783133742}
   - component: {fileID: 4559239059783133729}
   - component: {fileID: 8673719363241543662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Interacable Object
-  m_TagString: Untagged
+  m_TagString: Scroll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,21 +44,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4559239059783133735}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &4559239059783133728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559239059783133735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81dcca8ac911934bb9a95f0c3f1309e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotaSpeed: 30
-  amp: 0.3
-  freq: 1
 --- !u!65 &4559239059783133742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85,7 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098483766c8f83a489ee55328b932e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 0}
+  questManager: {fileID: 8673719363241543662}
+  sceneSwitcher: {fileID: 0}
 --- !u!114 &8673719363241543662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,9 +83,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d735b7e10b1ebc479046d7666b754b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
+  interactionsManager: {fileID: 0}
+  clericInteract: {fileID: 0}
+  isInRangeScroll: 0
+  isInRangeBow: 0
+  isInRangeClericNPC: 0
+  isInRangeArcherNPC: 0
+  collectedScroll: 0
+  collectedBow: 0
   InteractText: {fileID: 0}
   ScrollUI: {fileID: 0}
+  BowUI: {fileID: 0}
+  Scroll: {fileID: 4559239059783133735}
+  Bow: {fileID: 0}
+  ScrollPos: {fileID: 4559239059783133731}
+  BowPos: {fileID: 0}
+  DumpPos: {fileID: 0}
 --- !u!1 &4559239059807204574
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,8 +110,8 @@ GameObject:
   - component: {fileID: 4559239059807103230}
   - component: {fileID: 4559239059806300382}
   - component: {fileID: 4559239059805202974}
-  m_Layer: 0
-  m_Name: scroll
+  m_Layer: 8
+  m_Name: scroll_c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

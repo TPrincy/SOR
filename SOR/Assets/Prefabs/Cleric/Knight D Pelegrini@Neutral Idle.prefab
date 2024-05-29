@@ -250,8 +250,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questManager: {fileID: 3181488415287730651}
   interactionsManager: {fileID: 1443480043605500915}
-  cam: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerCam: {fileID: 0}
   clericConversation: {fileID: 0}
+  itemClericConversation: {fileID: 0}
+  archerConversation: {fileID: 0}
+  itemArcherConversation: {fileID: 0}
 --- !u!114 &1443480043605500915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 3181488415287730651}
+  sceneSwitcher: {fileID: 0}
 --- !u!114 &3181488415287730651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,10 +284,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionsManager: {fileID: 1443480043605500915}
   clericInteract: {fileID: 5866666021783354523}
-  isInRangeCollectable: 0
-  isInRangeNPC: 0
+  isInRangeScroll: 0
+  isInRangeBow: 0
+  isInRangeClericNPC: 0
+  isInRangeArcherNPC: 0
+  collectedScroll: 0
+  collectedBow: 0
   InteractText: {fileID: 0}
   ScrollUI: {fileID: 0}
+  BowUI: {fileID: 0}
+  Scroll: {fileID: 0}
+  Bow: {fileID: 0}
 --- !u!1 &1047248061409183139
 GameObject:
   m_ObjectHideFlags: 0
