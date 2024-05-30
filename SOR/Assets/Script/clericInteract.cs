@@ -12,15 +12,21 @@ public class clericInteract : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerCam playerCam;
 
-    bool isTalking = false;
+    public bool isTalking = false;
 
     [Header("Cleric Dialogue")]
     [SerializeField] public NPCConversation clericConversation;
     [SerializeField] public NPCConversation ClericDialogueItemCollect;
 
+    [Header("Gaurd Dialogue")]
+    [SerializeField] public NPCConversation gaurdConversaation;
+    [SerializeField] public NPCConversation gaurdDialogueItemCollect;
+
     [Header("Archer Dialogue")]
     [SerializeField] public NPCConversation archerConversation;
     [SerializeField] public NPCConversation ArcherDialogueItemColect;
+
+    
 
     private void Update()
     {
@@ -61,6 +67,17 @@ public class clericInteract : MonoBehaviour
         playerCam.enabled = false;
         playerMovement.enabled = false;
         ConversationManager.Instance.StartConversation(archerConversation);
+    }
+
+    public void archerItemConvo()
+    {
+        isTalking = true;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        playerCam.enabled = false;
+        playerMovement.enabled = false;
+        ConversationManager.Instance.StartConversation(ArcherDialogueItemColect);
     }
 
     public void endConvo()

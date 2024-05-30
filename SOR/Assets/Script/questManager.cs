@@ -50,6 +50,7 @@ public class questManager : MonoBehaviour
 
 
         }
+        
         else if(Input.GetKeyDown(KeyCode.E) && isInRangeBow)
         {
 
@@ -74,13 +75,18 @@ public class questManager : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.E) && isInRangeClericNPC && !collectedScroll)
         {
-            print("item not collected");
             clericInteract.clericTalk();
         }
 
-        else if(Input.GetKeyDown(KeyCode.E) && isInRangeArcherNPC)
+        else if(Input.GetKeyDown(KeyCode.E) && isInRangeArcherNPC && !collectedBow)
         {
             clericInteract.archerTalk();
+        }
+
+        else if( Input.GetKeyDown(KeyCode.E) && isInRangeArcherNPC && collectedBow)
+        {
+            BowUI.SetActive(false);
+            clericInteract.archerItemConvo();
         }
     }
 }
