@@ -35,8 +35,6 @@ public class noEntryScript : MonoBehaviour
             playerCam.enabled = false;
             playerMovement.enabled = false;
             ConversationManager.Instance.StartConversation(clericInteract.gaurdDialogueItemCollect);
-            Destroy (endzonecollider);
-
         }
         else
         {
@@ -47,6 +45,7 @@ public class noEntryScript : MonoBehaviour
             playerCam.enabled = false;
             playerMovement.enabled = false;
             ConversationManager.Instance.StartConversation(clericInteract.gaurdConversaation);
+            
         }
     }
 }
